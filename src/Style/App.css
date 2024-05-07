@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+html{
+  font-family: 'Candal', sans-serif;
+}
 body{
   padding: 0;
   margin: 0;
-}
-.App {
-  background-color: red;
+  background-image: url("BackgroundImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
