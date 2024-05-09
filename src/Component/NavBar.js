@@ -13,7 +13,7 @@ function NavBar(props) {
                 <li className="List-item">{props.link3}</li>
                 <li className="List-item">{props.link4}</li>
             </ol>
-            <span id="connexionBtn"><Buttons value="Connecter" /></span>
+            <span onClick={()=>alert("Connected")} id="connexionBtn"><Buttons value="Connecter" /></span>
 
         </nav>
     );
