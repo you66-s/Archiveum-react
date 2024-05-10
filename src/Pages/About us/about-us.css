@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&display=swap');
+*{
+    font-family: "Freeman", sans-serif;
+}
+section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+p#paragraph{
+    margin-left: auto;
+    margin-right: auto;
+    color: #CCCCCC;
+    width: 75%;
+}
+div.propos-sec{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+div.Type-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 30%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.Team-Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 14px;
+    gap: 30px;
+    width: 60%;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+div.member-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+    color: black;
+}
+img.avatar{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+div.Feedback-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+div.feedback-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 450px;
+    height: 300px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 14px;
+}
+div.author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img#auth-logo{
+    width: 42px;
+    height: 42px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+div.email-sec{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+}
+input#emailInput{
+    width: 15%;
+}
+div.newsletter-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 40px;
+    width: 55%;
+}
