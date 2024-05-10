@@ -95,11 +95,14 @@ button#submit-btn{
     background-color: #5C54AC;
 }
 div.conditions-Sec{
-    width: 100%;
+    width: 75%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    gap: 10px;
+    margin-right: auto;
+    margin-left: auto;
 }
 div.positive-sec{
     width: 450px;
@@ -110,8 +113,11 @@ div.positive-sec{
 }
 div.negative-sec{
     width: 450px;
-    height: fit-content;
+    height: inherit;
     border-radius: 14px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
