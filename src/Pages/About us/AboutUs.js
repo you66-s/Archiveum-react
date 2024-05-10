@@ -7,7 +7,7 @@ import avatar1 from "./Image/i.jpg"
 import avatar2 from "./Image/oualla4.png"
 import std from "./Image/8596567.png"
 import "./about-us.css"
-function About_us() {
+function AboutUs() {
     return (
             <section className="main-Container">
                 <span id="logo"><img id="logo-img" src={logo} alt="logo"/></span>
@@ -84,8 +84,6 @@ function About_us() {
                     </div>
                 </div>
             </section>
-
     );
 }
-
-export default About_us;
+export default AboutUs;
