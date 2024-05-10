@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&display=swap');
+*{
+    font-family: "Freeman", sans-serif;
+}
+section.Contact-Page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+div.contact-Form{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 15px;
+    gap: 25px;
+    border: 3px solid #5C54AC;
+    border-radius: 14px;
+}
+input#name, input#subject{
+    width: 50%;
+}
+div.Contact-nameSubject{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+input{
+    padding: 8px;
+    border: 3px solid #5C54AC;
+    border-radius: 14px;
+    font-weight: bolder;
+    color: #CCCCCC;
+}
+textarea{
+    padding: 8px;
+    border: 3px solid #5C54AC;
+    border-radius: 14px;
+    height: 200px;
+    resize: none;
+    font-weight: bolder;
+    color: #CCCCCC;
+}
+h2{
+    color: #5C54AC;
+    font-weight: bold;
+}
+p{
+    font-size: 28px;
+    font-weight: bolder;
+    width: 350px;
+    color: #CCCCCC;
+}
+button{
+    background-color: #5C54AC;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+textarea:focus, input:focus{
+    border: 3px solid #5C54AC;
+    color: black;
+}
+{
+    color: black;
+}

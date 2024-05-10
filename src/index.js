@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import AddDocument from "./Pages/Add document/Ajouter_Document";
+import Contact from "./Pages/Contact/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       {/*<App/>  import App from './App';*/}
-      <AddDocument/>
+        <Contact/>
   </React.StrictMode>
 );
 

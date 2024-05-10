@@ -4,10 +4,6 @@ import uploadIcon from "./SVGs/upload-minimalistic-svgrepo-com.svg"
 import checkMarkdown from "./SVGs/checkmark-circle-svgrepo-com.png";
 import cancelMark from "./SVGs/cancel-svgrepo-com.png"
 
-
-
-
-
 function AddDocument() {
     function handleFile() {
         alert("File uploaded")
