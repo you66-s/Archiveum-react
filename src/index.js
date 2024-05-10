@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import AddDocument from "./Pages/Add document/Ajouter_Document";
-import Contact from "./Pages/Contact/Contact";
 import About_us from "./Pages/About us/About_us";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
