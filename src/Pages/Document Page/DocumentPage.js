@@ -7,6 +7,8 @@ import docType from "./Icons/icons8-document-100.png"
 import note from "./Icons/SVGRepo_iconCarrier.png"
 import star from "./Icons/Star rate.png"
 function DocumentPage() {
+
+
     const [rating , setRating] = useState(0);
     const [hover, setHover] = useState(null)
     let currentIndex = 0
@@ -14,7 +16,7 @@ function DocumentPage() {
         const currentRate = index + 1;
         currentIndex++;
         return(
-           <span key={i}>
+           <span key={index}>
                <input
                    className="hidden cursor-pointer	"
                    type="radio"
@@ -26,19 +28,24 @@ function DocumentPage() {
                         currentRate <= (hover || rating) ? "#5C54AC" : "white",
                     color : currentRate <= (hover || rating) ? "white" : "black"
                 }}
-                       onClick={()=>setRating(currentRate)}
+                       onClick={()=> {
+                           setRating(currentRate)
+                       }}
                        onMouseEnter={() => setHover(currentRate)}
                        onMouseLeave={() => setHover(null)}
                        value={currentIndex} type="button" className="rate-btn border-2 w-[51px] h-[51px] border-[#5C54AC] text-black bg-white rounded-[7px] font-bold"/>
            </span>
         );
+
     })
+
+
     return(
     <>
             <div style={{marginLeft: 'auto', marginRight: 'auto'}} className="download-sec flex flex-col justify-center gap-4 w-1/2 h-42 p-6 drop-shadow-lg rounded-[14px] bg-white">
                 <span className="text-[#5C54AC] text-[32px] font-bold">Examen corrigé de Analyse 1 MIP.pdf</span>
                 <span className="flex flex-row gap-2 items-center"><img src={descrIcon} alt="decriptio" style={{width: '16px', height: '16px'}}/>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-                <div className="flex flex-row gap-3 items-center">
+                <div className="flex flex-row gap-3 items-center ">
                     <span className="flex flex-row gap-2 items-center">
                         <img src={scholarIcon} alt="scholar" style={{width: '16px', height: '16px'}}/>
                         <p>Errachidia - Faculte des sciences et techniques</p>

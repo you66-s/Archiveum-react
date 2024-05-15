@@ -1,9 +1,18 @@
 import './App.css';
-import NavBar from "./Component/NavBar";
+import Web3 from "web3";
+import LandingPage from "./Pages/LandingPage";
+import EspaceDocument from "./Pages/EspaceDocument";
+
 function App() {
-  return (
-    <div className="App">
-      <NavBar link1="Home" link2="Explore" link3="Contact" link4="About us" />
+    //Hooks
+
+    //Connecting to Ethereum
+    const provider = new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545");
+    const instanceWeb3 = new Web3(provider);
+
+    return (
+    <div className="App p-7">
+        <LandingPage/>
     </div>
   );
 }
