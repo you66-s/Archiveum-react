@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import NavBar from "../Component/NavBar";
 import Buttons from "../Component/Buttons";
+import {Link} from "react-router-dom";
 function LandingPage() {
+    //functions
+    function loggedIn() {
+    }
     //Hooks
     const [correctNet, setCorrectNet] = useState(false);
     const [LoggedIn, setLoggedIn] = useState(false);
@@ -29,12 +33,12 @@ function LandingPage() {
             setCurrentAccount(accounts[0])
             console.log(currentAccount, LoggedIn, correctNet)
         } catch (e) {
-            console.log(e)
+            alert("erreur lors du connexion avec MetaMask")
         }
     }
     return (
         <div>
-            <NavBar link1="Home" link2="Explore" link3="Contact" link4="About us" button={<Buttons value="Connect" func={connectAccount}/>}/>
+            <NavBar link1={<Link to='/'>Home</Link>} link2={<Link to='/'>Explore</Link>} link3={<Link to='/contact'>contact</Link>} link4={<Link to='/about'>about us</Link>} button={<Buttons value="Connect" func={connectAccount}/>}/>
             <h1>Landing Page</h1>
         </div>
     )
