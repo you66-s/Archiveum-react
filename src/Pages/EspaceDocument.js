@@ -1,8 +1,14 @@
 import React from "react";
 import NavBar from "../Component/NavBar";
+import ProfileIcon from "../Component/profileIcon";
+import {Link} from "react-router-dom";
+
 function EspaceDocument() {
     return(
-        <NavBar link1="Espace Document" link2="Ajouter Document" link3="Contact" />
+        <div className="Docspace p-7">
+
+        </div>
+
     );
 }
 export default EspaceDocument;

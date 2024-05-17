@@ -3,6 +3,9 @@ import "../Add document/addDoc.css"
 import uploadIcon from "./SVGs/upload-minimalistic-svgrepo-com.svg"
 import checkMarkdown from "./SVGs/checkmark-circle-svgrepo-com.png";
 import cancelMark from "./SVGs/cancel-svgrepo-com.png"
+import {Link} from "react-router-dom";
+import ProfileIcon from "../../Component/profileIcon";
+import NavBar from "../../Component/NavBar";
 
 function AddDocument() {
     function handleFile() {
@@ -10,7 +13,7 @@ function AddDocument() {
     }
 
     return (
-        <>
+        <div className="uploadDoc p-7">
             <div className="File-container">
                 <div className="upload-box">
                     <img className="upload-img" alt="upload" src={uploadIcon} width="125px" height="125px"/>
@@ -105,7 +108,7 @@ function AddDocument() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
