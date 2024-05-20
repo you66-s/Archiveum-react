@@ -1,7 +1,5 @@
 import React from "react";
-import NavBar from "../Component/NavBar";
-import ProfileIcon from "../Component/profileIcon";
-import {Link} from "react-router-dom";
+
 
 function EspaceDocument() {
     return(

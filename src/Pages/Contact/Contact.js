@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Contact.css"
-import NavBar from "../../Component/NavBar";
 
 //TODO: figure out a solution for the connectAccount Function
 function Contact() {

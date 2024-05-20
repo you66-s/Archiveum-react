@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import mission from "./icons/icons8-goal-100.png"
 import goals from "./icons/icons8-mission-100.png"
 import impact from "./icons/icons8-impact-64.png"
 import avatar1 from "./Image/i.jpg"
 import avatar2 from "./Image/oualla4.png"
+import av3 from "./Image/amri.png"
 import std from "./Image/8596567.png"
 import "./about-us.css"
+import Popup from "../../Component/popup";
 function AboutUs() {
+    const [showModel, setShowModal] = useState(false)
     return (
             <section className="main-Container p-7">
                 <h2 className="text-3xl">Révolutionner l'archivage des fichiers educatifs avec Archiveum</h2>
@@ -49,7 +52,7 @@ function AboutUs() {
                         <span style={{color: '#CCCCCC'}}>Supervisor</span>
                     </div>
                     <div className="member-container">
-                        <img style={{backgroundColor: '#CCCCCC'}} className="avatar" src="" alt=""/>
+                        <img className="avatar" src={av3} alt="amri"/>
                         <span style={{marginTop: '10px'}}>Fatima Ezzahra Amri</span>
                         <span style={{color: '#CCCCCC'}}>Developer</span>
                     </div>
@@ -78,7 +81,13 @@ function AboutUs() {
                     <p style={{width: '100%', fontWeight: 'normal'}}>Sign up for our newsletter to stay informed about the latest news, updates, and exclusive offers from VisionCrafters. By subscribing, you'll receive regular emails featuring project highlights, industry insights, and tips for your construction projects.</p>
                     <div className="email-sec">
                         <input className="w-full" id="emailInput" type="email" placeholder="entrez votre email"/>
-                        <button id="submit" type="submit" onClick={()=>alert("Merci pour votre confience")}>Sign up</button>
+                        <button id="submit" type="submit" onClick={()=>{
+                            setShowModal(true)
+
+                        }}>Sign up</button>
+                        {showModel && <Popup t="Merci" close={()=> {
+                            setShowModal(false)
+                        }}/>}
                     </div>
                 </div>
             </section>

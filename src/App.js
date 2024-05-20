@@ -1,8 +1,8 @@
 import './App.css';
-//import Web3 from "web3";
+import { Web3 } from 'web3';
 
 import NavBar from "./Component/NavBar";
-import {createBrowserRouter, Link, Route, RouterProvider, Routes, useNavigate} from "react-router-dom";
+import { Route, Routes, useNavigate} from "react-router-dom";
 import Buttons from "./Component/Buttons";
 import React, {useState} from "react";
 import LandingPage from "./Pages/LandingPage";
@@ -23,7 +23,6 @@ function App() {
             )
         }else return (<NavBar link1="Home" link2="Espace Document" link3="Ajouter Document" link4="Contact" link5="About us" button={<Buttons value="Connect" func={connectAccount}/>}/>)
     }
-    const [correctNet, setCorrectNet] = useState(false);
     const [LoggedIn, setLoggedIn] = useState(false);
     const [currentAccount, setCurrentAccount] = useState(null);
     const navigate = useNavigate();
@@ -36,25 +35,20 @@ function App() {
             } else {
                 console.log('MetaMask not detected')
             }
-            let chainId = await ethereum.request({method: 'eth_chainId'})
-            const ganachID = '0x539';
-            if (chainId === ganachID) {
-                setCorrectNet(true)
-                setLoggedIn(true)
-            } else {
-                alert('not connected to testnet')
-                setCorrectNet(false)
-            }
+            //let chainId = await ethereum.request({method: 'eth_chainId'})
+            //const ganachID = '0x539';
             const accounts = await ethereum.request({method: 'eth_requestAccounts'})
+            setLoggedIn(true)
             console.log("Account Founded", accounts[0])
             setCurrentAccount(accounts[0])
             navigate('/docspace');
-            console.log(currentAccount, LoggedIn, correctNet)
+            console.log(currentAccount, LoggedIn)
         } catch (e) {
             alert("erreur lors du connexion avec MetaMask")
             setLoggedIn(false)
         }
     }
+
     //Connecting to Ethereum
     //const provider = new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545");
     //const instanceWeb3 = new Web3(provider);

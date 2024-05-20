@@ -1,7 +1,5 @@
 import React from 'react';
-import NavBar from "../Component/NavBar";
-import Buttons from "../Component/Buttons";
-import {Link} from "react-router-dom";
+
 function LandingPage() {
     //functions
     //Hooks

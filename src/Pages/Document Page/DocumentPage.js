@@ -6,9 +6,10 @@ import filliere from "./Icons/Group.png"
 import docType from "./Icons/icons8-document-100.png"
 import note from "./Icons/SVGRepo_iconCarrier.png"
 import star from "./Icons/Star rate.png"
+import Popup from "../../Component/popup";
 function DocumentPage() {
 
-
+    const [showModel, setShowModal] = useState(false)
     const [rating , setRating] = useState(0);
     const [hover, setHover] = useState(null)
     let currentIndex = 0
@@ -38,8 +39,6 @@ function DocumentPage() {
         );
 
     })
-
-
     return(
     <>
             <div style={{marginLeft: 'auto', marginRight: 'auto'}} className="download-sec flex flex-col justify-center gap-4 w-1/2 h-42 p-6 drop-shadow-lg rounded-[14px] bg-white">
@@ -92,7 +91,10 @@ function DocumentPage() {
                     </select>
                     <p className="font-bold">Veuillez decrire la raison de ce signalement </p>
                     <textarea style={{resize: 'none'}} className="p-1 w-full h-[150px] border-2 rounded-[7px] border-[#5C54AC]" placeholder="votre message"></textarea>
-                    <button className="send-btn bg-[#5C54AC] text-white w-[120px] h-[35px] rounded-[10px]" type="submit">Envoyer</button>
+                    <button onClick={()=> setShowModal(true)} className="send-btn bg-[#5C54AC] text-white w-[120px] h-[35px] rounded-[10px]" type="submit">Envoyer</button>
+                    {showModel && <Popup t="Merci Pour Votre " close={()=> {
+                        setShowModal(false)
+                    }}/>}
                 </div>
             </div>
     </>
